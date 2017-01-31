@@ -23,8 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 let data = try Data(contentsOf: url)
                 let xml = SWXMLHash.parse(String(data: data, encoding: .utf8)!)
                 
-                let instanceCategory = CategoriesTableViewController()
-                instanceCategory.saveXML(xml: xml)
+                /*let instanceCategory = CategoriesTableViewController()
+                instanceCategory.xml = xml*/
             }
             catch{
                 print("error retrieving file")

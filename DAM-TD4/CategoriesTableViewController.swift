@@ -8,16 +8,12 @@
 
 import UIKit
 import SWXMLHash
+import SDWebImage
 
 class CategoriesTableViewController: UITableViewController {
     
-    var xml = SWXMLHash.parse("test")
-    
-    let tab = [AnyClass]()
-    
-    func saveXML(xml: XMLIndexer){
-        self.xml = xml
-    }
+    //var xml = SWXMLHash.parse("")
+    var tab = [Any]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,9 +25,37 @@ class CategoriesTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
         
-        for elem in xml["data"]["categories"]["category"].all {
-            let id = elem.element?.attribute(by: "id")?.text
+        if let url = URL(string: "http://fairmont.lanoosphere.com/mobile/getdata?lang=en")
+        {
+            do{
+                let data = try Data(contentsOf: url)
+                let xml = SWXMLHash.parse(String(data: data, encoding: .utf8)!)
+                
+                for elem in xml["data"]["categories"]["category"].all {
+                    let id = elem.element?.attribute(by: "id")?.text
+                    let nom = elem.element?.attribute(by: "name")?.text
+                    
+                    tab.append(Category(id: Int(id!)!, nom: nom!))
+                    
+                    for elem2 in elem["element"].all{
+                        let id = elem2.element?.attribute(by: "id")?.text
+                        let nom = elem2.element?.attribute(by: "name")?.text
+                        let image = elem2.element?.attribute(by: "image")?.text
+                        let description = elem2.element?.attribute(by: "descr")?.text
+                        
+                        tab.append(Element(id: Int(id!)!, image: image!, nom: nom!, description: description!))
+                    }  
+                }
+
+            }
+            catch{
+                print("error retrieving file")
+            }
         }
+        else{
+            print("not an URL")
+        }
+                print(tab)
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,13 +72,39 @@ class CategoriesTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return tab.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Element", for: indexPath)
+        var objet = tab[indexPath.row]
+        
+        var cell = UITableViewCell()
+        
+        if objet is Category{
+            cell = tableView.dequeueReusableCell(withIdentifier: "Category", for: indexPath)
+            var categoryCell = objet as! Category
+            
+            if let labelName = cell.viewWithTag(101) as? UILabel {
+                labelName.text = categoryCell.nom
+            }
 
+            if let imageView = cell.viewWithTag(100) as? UIImageView {
+                imageView.sd_setImage(with: URL(string: "http://www.domain.com/path/to/image.jpg"), placeholderImage: UIImage(named: "placeholder.png"))
+            }
+            
+        }
+        else{
+            cell = tableView.dequeueReusableCell(withIdentifier: "Element", for: indexPath)
+            var elementCell = objet as! Element
+            
+            if let labelName = cell.viewWithTag(102) as? UILabel {
+                labelName.text = elementCell.nom
+                
+            }
+            
+        }
+        
         return cell
     }
     

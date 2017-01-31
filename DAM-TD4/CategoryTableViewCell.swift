@@ -9,9 +9,8 @@
 import UIKit
 
 class CategoryTableViewCell: UITableViewCell {
-
-    @IBOutlet weak var outletCategory: UILabel!
     
+    @IBOutlet weak var outletNom: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
