@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A6D0E741E40749D00593541 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6D0E731E40749D00593541 /* CategoryTableViewCell.swift */; };
+		6A6D0E761E4074D400593541 /* ElementTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6D0E751E4074D400593541 /* ElementTableViewCell.swift */; };
 		6A9420E91E3F685A0043AC87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9420E81E3F685A0043AC87 /* AppDelegate.swift */; };
 		6A9420EB1E3F685A0043AC87 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9420EA1E3F685A0043AC87 /* ViewController.swift */; };
 		6A9420EE1E3F685A0043AC87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A9420EC1E3F685A0043AC87 /* Main.storyboard */; };
@@ -37,6 +39,8 @@
 
 /* Begin PBXFileReference section */
 		16158630767866EFCDAE3AAF /* Pods-DAM-TD4.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DAM-TD4.release.xcconfig"; path = "Pods/Target Support Files/Pods-DAM-TD4/Pods-DAM-TD4.release.xcconfig"; sourceTree = "<group>"; };
+		6A6D0E731E40749D00593541 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
+		6A6D0E751E4074D400593541 /* ElementTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElementTableViewCell.swift; sourceTree = "<group>"; };
 		6A9420E51E3F68590043AC87 /* DAM-TD4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DAM-TD4.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A9420E81E3F685A0043AC87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6A9420EA1E3F685A0043AC87 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +111,8 @@
 			isa = PBXGroup;
 			children = (
 				6A9420E81E3F685A0043AC87 /* AppDelegate.swift */,
+				6A6D0E731E40749D00593541 /* CategoryTableViewCell.swift */,
+				6A6D0E751E4074D400593541 /* ElementTableViewCell.swift */,
 				6A9420EA1E3F685A0043AC87 /* ViewController.swift */,
 				6A9421961E3F922D0043AC87 /* CategoriesTableViewController.swift */,
 				6A9420EC1E3F685A0043AC87 /* Main.storyboard */,
@@ -340,9 +346,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A6D0E761E4074D400593541 /* ElementTableViewCell.swift in Sources */,
 				6A9421971E3F922D0043AC87 /* CategoriesTableViewController.swift in Sources */,
 				6A9420EB1E3F685A0043AC87 /* ViewController.swift in Sources */,
 				6A9420E91E3F685A0043AC87 /* AppDelegate.swift in Sources */,
+				6A6D0E741E40749D00593541 /* CategoryTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
