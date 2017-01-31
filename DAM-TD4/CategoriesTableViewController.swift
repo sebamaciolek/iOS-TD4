@@ -7,8 +7,17 @@
 //
 
 import UIKit
+import SWXMLHash
 
 class CategoriesTableViewController: UITableViewController {
+    
+    var xml = SWXMLHash.parse("test")
+    
+    let tab = [AnyClass]()
+    
+    func saveXML(xml: XMLIndexer){
+        self.xml = xml
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +27,11 @@ class CategoriesTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        
+        for elem in xml["data"]["categories"]["category"].all {
+            let id = elem.element?.attribute(by: "id")?.text
+        }
     }
 
     override func didReceiveMemoryWarning() {

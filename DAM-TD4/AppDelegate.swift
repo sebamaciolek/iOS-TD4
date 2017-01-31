@@ -14,7 +14,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
@@ -24,9 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 let data = try Data(contentsOf: url)
                 let xml = SWXMLHash.parse(String(data: data, encoding: .utf8)!)
                 
-                for elem in xml["data"]["categories"]["category"].all {
-                    let id = elem.element?.attribute(by: "id")?.text
-                }
+                let instanceCategory = CategoriesTableViewController()
+                instanceCategory.saveXML(xml: xml)
             }
             catch{
                 print("error retrieving file")
