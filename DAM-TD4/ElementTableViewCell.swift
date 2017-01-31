@@ -11,6 +11,7 @@ import UIKit
 class ElementTableViewCell: UITableViewCell {
 
     @IBOutlet weak var outletImage: UIImageView!
+    @IBOutlet weak var outletName: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
