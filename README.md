@@ -16,7 +16,7 @@ Taches à réaliser :
 Taches en cours :
 - Récuperer le XML parsé dans le LaunchScreen
 - Affichage des informations dans les cellules
-- (CORRECTION) Utiliser des sections dans le UITableView
+- (CORRECTION) Utiliser des sections dans le UITableView (voir http://blog.apoorvmote.com/uitableview-with-multiple-sections-ios-swift/?lang=fr)
 
 taches terminés :
 - Importation du projet globale
