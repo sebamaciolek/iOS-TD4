@@ -16,6 +16,7 @@ Taches à réaliser :
 Taches en cours :
 - Récuperer le XML parsé dans le LaunchScreen
 - Affichage des informations dans les cellules
+- (CORRECTION) Utiliser des sections dans le UITableView
 
 taches terminés :
 - Importation du projet globale
