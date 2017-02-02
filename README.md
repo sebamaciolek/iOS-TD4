@@ -1,16 +1,19 @@
 Nom du projet : TD4
+
 Binomes : Landraudie Marine et Maciolek Sebastian
+
 Temps : 2 semaines (2 séances)
 
 Taches à réaliser :
-- Ouverture d'un WebView lors du clic
 - Récuperation les informations nécessaires de l'element cliqué
-- Affichage des informations dans le WebView
-- Création d'un formulaire avec les différents élements
+- Affichage des informations en fonction des données (si image_large alors afficher l'image sinon afficher descr dans une WebView)
+- Ajout d'un bouton "Contact" dans la navigationBar
+- Création d'un formulaire avec les différents élements dans une nouvelle View (en suivant le charte imposée)
 - Récuperation des données du formulaire
-- Ouverture de mail
+- Ouverture de mail et affichage des données récuperés précedement
 - Envoi du mail
-- (BONUS) Rendre le tout disponible hors-ligne
+- (BONUS) Adaptation du WebService en fonction de la langue du terminal
+- (BONUS) Rendre le tout disponible hors-ligne (mise en cache du fichier XML)
 - (BONUS) Ajout de contraintes dans les données à saisir (format et taille)
 
 Taches en cours :
