@@ -7,11 +7,6 @@ Temps : 2 semaines (2 séances)
 Taches à réaliser :
 - Récupération des informations nécessaires de l'élément cliqué
 - Affichage des informations en fonction des données (si image_large alors afficher l'image sinon afficher descr dans une WebView)
-- Ajout d'un bouton "Contact" dans la navigationBar
-- Création d'un formulaire avec les différents éléments dans une nouvelle View (en suivant la charte imposée)
-- Récupération des données du formulaire
-- Ouverture de mail et affichage des données récuperées précédemment
-- Envoi du mail
 - (BONUS) Adaptation du WebService en fonction de la langue du terminal
 - (BONUS) Rendre le tout disponible hors-ligne (mise en cache du fichier XML)
 - (BONUS) Ajout de contraintes dans les données à saisir (format et taille)
@@ -31,3 +26,8 @@ taches terminés :
 - Modification du design des éléments du tableau (en suivant la charte imposée)
 - Récupération des balises <category> et <element> du XML
 - Affichage des cellules (vides)
+- - Ajout d'un bouton "Contact" dans la navigationBar
+- Création d'un formulaire avec les différents éléments dans une nouvelle View (en suivant la charte imposée)
+- Récupération des données du formulaire
+- Ouverture de mail et affichage des données récuperées précédemment
+- Envoi du mail
