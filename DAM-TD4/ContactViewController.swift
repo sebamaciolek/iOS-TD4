@@ -9,7 +9,7 @@
 import UIKit
 import MessageUI
 
-class ContactViewController: UIViewController, MFMailComposeViewControllerDelegate {
+class ContactViewController: UIViewController, MFMailComposeViewControllerDelegate, UITextFieldDelegate {
     @IBOutlet weak var outletNom: UITextField!
     @IBOutlet weak var outletPrenom: UITextField!
     @IBOutlet weak var outletEmail: UITextField!
@@ -21,7 +21,10 @@ class ContactViewController: UIViewController, MFMailComposeViewControllerDelega
 
         // Do any additional setup after loading the view.
         
-        
+        self.outletNom.delegate = self
+        self.outletPrenom.delegate = self
+        self.outletEmail.delegate = self
+        self.outletTelephone.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -79,5 +82,18 @@ class ContactViewController: UIViewController, MFMailComposeViewControllerDelega
     
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         controller.dismiss(animated: true, completion: nil)
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        outletNom.resignFirstResponder()
+        outletPrenom.resignFirstResponder()
+        outletEmail.resignFirstResponder()
+        outletTelephone.resignFirstResponder()
+        outletRappeller.resignFirstResponder()
+        return true
     }
 }
