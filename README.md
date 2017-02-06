@@ -26,8 +26,9 @@ taches terminés :
 - Modification du design des éléments du tableau (en suivant la charte imposée)
 - Récupération des balises <category> et <element> du XML
 - Affichage des cellules (vides)
-- - Ajout d'un bouton "Contact" dans la navigationBar
+- Ajout d'un bouton "Contact" dans la navigationBar
 - Création d'un formulaire avec les différents éléments dans une nouvelle View (en suivant la charte imposée)
 - Récupération des données du formulaire
 - Ouverture de mail et affichage des données récuperées précédemment
 - Envoi du mail
+- (CORRECTION) Rendre le formulaire responsive
