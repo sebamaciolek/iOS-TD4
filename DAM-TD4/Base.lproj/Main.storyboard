@@ -112,7 +112,7 @@
         <!--HOME-->
         <scene sceneID="1OP-DS-Soe">
             <objects>
-                <viewController title="HOME" id="liH-mB-9Ma" sceneMemberID="viewController">
+                <viewController title="HOME" id="liH-mB-9Ma" customClass="ContactViewController" customModule="DAM_TD4" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PEN-f9-V3Q"/>
                         <viewControllerLayoutGuide type="bottom" id="Xl7-v6-ZdQ"/>
@@ -168,16 +168,16 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vpl-De-L36">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="vpl-De-L36">
                                 <rect key="frame" x="16" y="250" width="343" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Me rappeller" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sCc-aP-BrN">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Me rappeler" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sCc-aP-BrN">
                                 <rect key="frame" x="16" y="286" width="109" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -195,10 +195,20 @@
                                 <state key="normal" title="ENVOYER">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="actionEnvoyer:" destination="liH-mB-9Ma" eventType="touchUpInside" id="Aqp-Mc-z9s"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.32549019607843138" green="0.32549019607843138" blue="0.32549019607843138" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="outletEmail" destination="LhK-TS-Dst" id="2yu-zt-ocw"/>
+                        <outlet property="outletNom" destination="lR6-gR-0am" id="URy-jy-gpM"/>
+                        <outlet property="outletPrenom" destination="z7b-bW-ldt" id="pXm-Lh-wwM"/>
+                        <outlet property="outletRappeller" destination="Sio-X0-3eS" id="VXL-Fw-jQ7"/>
+                        <outlet property="outletTelephone" destination="vpl-De-L36" id="y69-wM-zdl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hwq-hf-e1F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
