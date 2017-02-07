@@ -13,6 +13,7 @@ Taches à réaliser :
 Taches en cours :
 - Récupération du XML parsé dans le LaunchScreen
 - Affichage des informations dans les cellules
+- Modification du design des sections (en suivant la charte imposée)
 
 Taches terminés :
 - Importation du projet globale
