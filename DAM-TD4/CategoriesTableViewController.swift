@@ -48,7 +48,6 @@ class CategoriesTableViewController: UITableViewController {
                         tab.append(Element(id: String(id!)!, image: image!, nom: nom!, description: description!))
                     }
                 }
-                
             }
             catch{
                 print("error retrieving file")
@@ -76,11 +75,11 @@ class CategoriesTableViewController: UITableViewController {
         return tab.count
     }
     
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    /*override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         
         return (arrayCategory[section].nom)
         
-    }
+    }*/
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var objet = tab[indexPath.row]
@@ -115,6 +114,28 @@ class CategoriesTableViewController: UITableViewController {
         
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = UIView()
+        
+        view.backgroundColor = UIColor(red: 86.00/255, green: 86.00/255, blue: 86.00/255, alpha: 1.00)
+        
+        let label = UILabel()
+        
+        label.text = (arrayCategory[section].nom)
+        label.textColor = UIColor.white
+        label.frame = CGRect(x: 0, y: 0, width: 200, height: 45)
+        
+        view.addSubview(label)
+        
+        return view
+    }
+
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 45
+    }
+    
     
    // override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
