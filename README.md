@@ -13,7 +13,7 @@ Taches à réaliser :
 Taches en cours :
 - Récupération du XML parsé dans le LaunchScreen
 - Affichage des informations dans les cellules
-- Modification du design des sections (en suivant la charte imposée)
+- (CORRECTION) Rendre le label des sections responsive
 
 Taches terminés :
 - Importation du projet globale
@@ -34,3 +34,4 @@ Taches terminés :
 - (BONUS) Ajout de contraintes dans les données à saisir (format et taille)
 - (CORRECTION) Utiliser des sections dans le UITableView (voir http://blog.apoorvmote.com/uitableview-with-multiple-sections-ios-swift/?lang=fr)
 - Récupération du nom des sections depuis le XML et les afficher dans les sections de l'appli
+- Modification du design des sections (en suivant la charte imposée)
