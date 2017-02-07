@@ -9,10 +9,10 @@
 import Foundation
 
 class Category {
-    var id = Int()
+    var id = String()
     var nom = String()
     
-    init(id: Int, nom: String){
+    init(id: String, nom: String){
         self.id = id
         self.nom = nom
     }
