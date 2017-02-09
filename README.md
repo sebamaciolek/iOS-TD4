@@ -5,7 +5,6 @@ Binomes : Landraudie Marine et Maciolek Sebastian
 Temps : 2 semaines (2 séances)
 
 Taches à réaliser :
-- (BONUS) Adaptation du WebService en fonction de la langue du terminal
 - (BONUS) Rendre le tout disponible hors-ligne (mise en cache du fichier XML)
 
 Taches en cours :
@@ -35,3 +34,4 @@ Taches terminés :
 - Affichage des informations dans les cellules
 - Récupération des informations nécessaires de l'élément cliqué
 - Affichage des informations en fonction des données (si image_large alors afficher l'image sinon afficher descr dans une WebView)
+- (BONUS) Adaptation du WebService en fonction de la langue du terminal
