@@ -10,7 +10,6 @@
 		6A0222751E4C5A5800607A18 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0222741E4C5A5800607A18 /* WebViewController.swift */; };
 		6A594FDF1E48AE8700A6EDBB /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A594FDE1E48AE8700A6EDBB /* ContactViewController.swift */; };
 		6A6D0E781E4077D100593541 /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6D0E771E4077D100593541 /* Element.swift */; };
-		6A6D0E7A1E407A1700593541 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6D0E791E407A1700593541 /* Category.swift */; };
 		6A9420E91E3F685A0043AC87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9420E81E3F685A0043AC87 /* AppDelegate.swift */; };
 		6A9420EB1E3F685A0043AC87 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9420EA1E3F685A0043AC87 /* ViewController.swift */; };
 		6A9420EE1E3F685A0043AC87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A9420EC1E3F685A0043AC87 /* Main.storyboard */; };
@@ -44,7 +43,6 @@
 		6A0222741E4C5A5800607A18 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		6A594FDE1E48AE8700A6EDBB /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		6A6D0E771E4077D100593541 /* Element.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Element.swift; sourceTree = "<group>"; };
-		6A6D0E791E407A1700593541 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		6A9420E51E3F68590043AC87 /* DAM-TD4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DAM-TD4.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A9420E81E3F685A0043AC87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6A9420EA1E3F685A0043AC87 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -122,7 +120,6 @@
 				6A9420EC1E3F685A0043AC87 /* Main.storyboard */,
 				6A9420EF1E3F685A0043AC87 /* Assets.xcassets */,
 				6A6D0E771E4077D100593541 /* Element.swift */,
-				6A6D0E791E407A1700593541 /* Category.swift */,
 				6A9420F11E3F685A0043AC87 /* LaunchScreen.storyboard */,
 				6A9420F41E3F685A0043AC87 /* Info.plist */,
 			);
@@ -358,7 +355,6 @@
 				6A9420EB1E3F685A0043AC87 /* ViewController.swift in Sources */,
 				6A0222751E4C5A5800607A18 /* WebViewController.swift in Sources */,
 				6A9420E91E3F685A0043AC87 /* AppDelegate.swift in Sources */,
-				6A6D0E7A1E407A1700593541 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,7 +13,7 @@ import SDWebImage
 class CategoriesTableViewController: UITableViewController {
     
     //var xml = SWXMLHash.parse("")
-    var arrayCategory : [Category] = []
+    var arrayCategory : [String] = []
     var arrayElement : [[Element]] = []
     
     override func viewDidLoad() {
@@ -33,10 +33,9 @@ class CategoriesTableViewController: UITableViewController {
                 let xml = SWXMLHash.parse(String(data: data, encoding: .utf8)!)
                 
                 for category in xml["data"]["categories"]["category"].all {
-                    let id = category.element?.attribute(by: "id")?.text
                     let nom = category.element?.attribute(by: "name")?.text
 
-                    arrayCategory.append(Category(id: String(id!)!, nom: nom!))
+                    arrayCategory.append(nom!)
                     
                     var newArrayElement: [Element] = []
                     
@@ -106,7 +105,7 @@ class CategoriesTableViewController: UITableViewController {
         
         let label = UILabel()
         
-        label.text = (arrayCategory[section].nom)
+        label.text = (arrayCategory[section])
         label.textColor = UIColor.white
         label.frame = CGRect(x: 0, y: 0, width: 200, height: 45)
         
