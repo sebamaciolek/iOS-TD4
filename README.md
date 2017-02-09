@@ -10,8 +10,6 @@ Taches à réaliser :
 
 Taches en cours :
 - Récupération du XML parsé dans le LaunchScreen
-- Récupération des informations nécessaires de l'élément cliqué
-- Affichage des informations en fonction des données (si image_large alors afficher l'image sinon afficher descr dans une WebView)
 - (CORRECTION) Rendre le label des sections responsive
 
 Taches terminés :
@@ -35,3 +33,5 @@ Taches terminés :
 - Récupération du nom des sections depuis le XML et les afficher dans les sections de l'appli
 - Modification du design des sections (en suivant la charte imposée)
 - Affichage des informations dans les cellules
+- Récupération des informations nécessaires de l'élément cliqué
+- Affichage des informations en fonction des données (si image_large alors afficher l'image sinon afficher descr dans une WebView)
