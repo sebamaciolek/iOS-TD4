@@ -32,7 +32,7 @@ class WebViewController: UIViewController {
             
             self.view.addSubview(imageView)
             
-            imageView.sd_setImage(with: URL(string: element.imageLarge), placeholderImage: UIImage(named: "Doge"))
+            imageView.sd_setImage(with: URL(string: element.imageLarge), placeholderImage: UIImage(named: "WindowsLoadingScreen"))
         }
     }
 

@@ -2,7 +2,7 @@ PODS:
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
-  - SWXMLHash (3.0.3)
+  - SWXMLHash (3.0.4)
 
 DEPENDENCIES:
   - SDWebImage (~> 4.0)
@@ -10,7 +10,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
-  SWXMLHash: 80d2529d74891bb2f15305a0b9e08f2a4f229ee7
+  SWXMLHash: 29d20b84692fc319ea8ed933058fe7d8d005139b
 
 PODFILE CHECKSUM: 50ea164bc653c42b47070556e1dd57b14928db0e
 

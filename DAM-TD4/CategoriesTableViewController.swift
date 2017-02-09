@@ -85,7 +85,7 @@ class CategoriesTableViewController: UITableViewController {
         
         if let imageView = cell.viewWithTag(100) as? UIImageView {
             let url = self.arrayElement[indexPath.section][indexPath.row].image
-            imageView.sd_setImage(with: URL(string: url), placeholderImage: UIImage(named: "Doge"))
+            imageView.sd_setImage(with: URL(string: url), placeholderImage: UIImage(named: "WindowsLoadingScreen"))
         }
         else{
             print("Cannot find imageView by tag")
