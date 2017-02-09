@@ -13,6 +13,7 @@ import SDWebImage
 class CategoriesTableViewController: UITableViewController {
     
     //var xml = SWXMLHash.parse("")
+    
     var arrayCategory : [String] = []
     var arrayElement : [[Element]] = []
     
@@ -25,28 +26,23 @@ class CategoriesTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
-        
-        if let url = URL(string: "http://fairmont.lanoosphere.com/mobile/getdata?lang=en")
+        if let url = URL(string: "http://fairmont.lanoosphere.com/mobile/getdata?lang=" + NSLocale.current.languageCode!)
         {
             do{
                 let data = try Data(contentsOf: url)
                 let xml = SWXMLHash.parse(String(data: data, encoding: .utf8)!)
                 
                 for category in xml["data"]["categories"]["category"].all {
-                    let nom = category.element?.attribute(by: "name")?.text
-
-                    arrayCategory.append(nom!)
+                    arrayCategory.append((category.element?.attribute(by: "name")?.text)!)
                     
                     var newArrayElement: [Element] = []
-                    
                     for element in category["element"].all{
-                        let id = element.element?.attribute(by: "id")?.text
                         let nom = element.element?.attribute(by: "name")?.text
                         let image = element.element?.attribute(by: "image")?.text
                         let description = element.element?.attribute(by: "descr")?.text
                         let imageLarge = element.element?.attribute(by: "image_large")?.text
 
-                        newArrayElement.append(Element(id: String(id!)!, image: image!, nom: nom!, description: description!, imageLarge: imageLarge!))
+                        newArrayElement.append(Element(image: image!, nom: nom!, description: description!, imageLarge: imageLarge!))
                     }
                     arrayElement.append(newArrayElement)
                 }
@@ -88,7 +84,7 @@ class CategoriesTableViewController: UITableViewController {
         }
         
         if let imageView = cell.viewWithTag(100) as? UIImageView {
-            var url = self.arrayElement[indexPath.section][indexPath.row].image
+            let url = self.arrayElement[indexPath.section][indexPath.row].image
             imageView.sd_setImage(with: URL(string: url), placeholderImage: UIImage(named: "Doge"))
         }
         else{
@@ -121,7 +117,6 @@ class CategoriesTableViewController: UITableViewController {
         
         let theWebViewController = WebViewController()
         theWebViewController.element = self.arrayElement[indexPath.section][indexPath.row]
-        
         
         navigationController?.pushViewController(theWebViewController, animated: true)
     }

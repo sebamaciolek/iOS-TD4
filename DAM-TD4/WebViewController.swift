@@ -20,19 +20,20 @@ class WebViewController: UIViewController {
         
         if element.imageLarge == ""{
             webView = UIWebView(frame: CGRect(x:0, y:0, width: UIScreen.main.bounds.width, height:UIScreen.main.bounds.height))
-            
             self.webView.isOpaque = false
             self.webView.backgroundColor = UIColor(red: 86.00/255, green: 86.00/255, blue: 86.00/255, alpha: 1.00)
+            
             loadWebView(webView: webView)
+            
             self.view.addSubview(webView)
         }
         else{
             imageView = UIImageView(frame: CGRect(x:0, y:0, width: UIScreen.main.bounds.width, height:UIScreen.main.bounds.height))
+            
             self.view.addSubview(imageView)
+            
             imageView.sd_setImage(with: URL(string: element.imageLarge), placeholderImage: UIImage(named: "Doge"))
         }
-
-        
     }
 
     override func didReceiveMemoryWarning() {

@@ -9,14 +9,12 @@
 import Foundation
 
 class Element {
-    var id = String()
     var image = String()
     var nom = String()
     var description = String()
     var imageLarge = String()
     
-    init(id: String, image: String, nom: String, description: String, imageLarge: String){
-        self.id = id
+    init(image: String, nom: String, description: String, imageLarge: String){
         self.image = image
         self.nom = nom
         self.description = description

@@ -30,7 +30,7 @@
                                         <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZKv-Ky-8ue">
                                             <rect key="frame" x="0.0" y="0.0" width="313" height="126"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="126" id="3ua-H1-jDe"/>
+                                                <constraint firstAttribute="width" secondItem="ZKv-Ky-8ue" secondAttribute="height" multiplier="313:126" id="2cp-0A-xW6"/>
                                                 <constraint firstAttribute="width" secondItem="ZKv-Ky-8ue" secondAttribute="height" multiplier="313:126" id="ZOp-qg-R0u"/>
                                                 <constraint firstAttribute="width" constant="313" id="Zeh-E0-dp8"/>
                                             </constraints>

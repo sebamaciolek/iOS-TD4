@@ -17,14 +17,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        if let url = URL(string: "http://fairmont.lanoosphere.com/mobile/getdata?lang=en")
+        if let url = URL(string: "http://fairmont.lanoosphere.com/mobile/getdata?lang=" + NSLocale.current.languageCode!)
         {
             do{
                 let data = try Data(contentsOf: url)
                 let xml = SWXMLHash.parse(String(data: data, encoding: .utf8)!)
                 
                 /*let instanceCategory = CategoriesTableViewController()
-                instanceCategory.xml = xml*/
+                instanceCategory.xml2 = xml*/
             }
             catch{
                 print("error retrieving file")

@@ -44,8 +44,11 @@ class ContactViewController: UIViewController, MFMailComposeViewControllerDelega
         let mailComposeViewController = configuredMailComposeViewController()
         
         if (outletNom.text?.characters.count)! < 5 || (outletPrenom.text?.characters.count)! < 5 || (outletTelephone.text?.characters.count)! < 10 || !(validateEmail(enteredEmail: outletEmail.text!)){
-            let sendMailErrorAlert = UIAlertView(title: "Erreur", message: "Le nom et prénom doivent contenir au minimum 10 caractères, le numéro de téléphone minimum 10 numéros et avoir une adresse valide", delegate: self, cancelButtonTitle: "Ok")
-            sendMailErrorAlert.show()
+            let alertController = UIAlertController(title: "Erreur", message: "Le nom et prénom doivent contenir au minimum 10 caractères, le numéro de téléphone minimum 10 numéros et avoir une adresse valide", preferredStyle: .alert)
+            let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alertController.addAction(defaultAction)
+            
+            present(alertController, animated: true, completion: nil)
         }
         else{
             if MFMailComposeViewController.canSendMail() {
@@ -79,8 +82,11 @@ class ContactViewController: UIViewController, MFMailComposeViewControllerDelega
     }
     
     func showSendMailErrorAlert() {
-        let sendMailErrorAlert = UIAlertView(title: "Could Not Send Email", message: "Your device could not send e-mail.  Please check e-mail configuration and try again.", delegate: self, cancelButtonTitle: "OK")
-        sendMailErrorAlert.show()
+        let alertController = UIAlertController(title: "Could Not Send Email", message: "Your device could not send e-mail.  Please check e-mail configuration and try again.", preferredStyle: .alert)
+        let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(defaultAction)
+        
+        present(alertController, animated: true, completion: nil)
     }
     
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
