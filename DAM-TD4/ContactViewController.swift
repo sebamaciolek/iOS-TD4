@@ -72,11 +72,16 @@ class ContactViewController: UIViewController, MFMailComposeViewControllerDelega
             statutSwitchRappeler = "NON"
         }
         
-        let bodyMail = "Nom : " + outletNom.text! + "\nPrénom : " + outletPrenom.text! + "\nEmail : " + outletEmail.text! + "\nTéléphone : " + outletTelephone.text! + "\nMe rappeler : " + statutSwitchRappeler
+        let bodyMail =
+            "<p><strong>Nom :</strong> " + outletNom.text! +
+            "</p><p><strong>Prénom :</strong> " + outletPrenom.text! +
+            "</p><p><strong>Email :</strong> " + outletEmail.text! +
+            "</p><p><strong>Téléphone :</strong> " + outletTelephone.text! +
+            "</p><p><strong>Être rappelé :</strong> " + statutSwitchRappeler + "</p>"
         
-        mailComposerVC.setToRecipients(["se.ba95@icloud.com"])
+        mailComposerVC.setToRecipients(["email@email.mail"])
         mailComposerVC.setSubject("Ma demande de contact")
-        mailComposerVC.setMessageBody(bodyMail, isHTML: false)
+        mailComposerVC.setMessageBody(bodyMail, isHTML: true)
         
         return mailComposerVC
     }

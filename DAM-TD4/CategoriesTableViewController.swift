@@ -103,7 +103,8 @@ class CategoriesTableViewController: UITableViewController {
         
         label.text = (arrayCategory[section])
         label.textColor = UIColor.white
-        label.frame = CGRect(x: 0, y: 0, width: 200, height: 45)
+        label.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 45)
+        label.textAlignment = .center
         
         view.addSubview(label)
         
