@@ -73,11 +73,11 @@ class ContactViewController: UIViewController, MFMailComposeViewControllerDelega
         }
         
         let bodyMail =
-            "<p><strong>Nom :</strong> " + outletNom.text! +
-            "</p><p><strong>Prénom :</strong> " + outletPrenom.text! +
-            "</p><p><strong>Email :</strong> " + outletEmail.text! +
-            "</p><p><strong>Téléphone :</strong> " + outletTelephone.text! +
-            "</p><p><strong>Être rappelé :</strong> " + statutSwitchRappeler + "</p>"
+            "<p><u><strong>Nom :</strong></u> " + outletNom.text! +
+            "</p><p><u><strong>Prénom :</strong></u> " + outletPrenom.text! +
+            "</p><p><u><strong>Email :</strong></u> " + outletEmail.text! +
+            "</p><p><u><strong>Téléphone :</strong></u> " + outletTelephone.text! +
+            "</p><p><u><strong>Être rappelé :</strong></u> " + statutSwitchRappeler + "</p>"
         
         mailComposerVC.setToRecipients(["email@email.mail"])
         mailComposerVC.setSubject("Ma demande de contact")
