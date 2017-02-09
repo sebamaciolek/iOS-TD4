@@ -23,11 +23,11 @@
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Element" rowHeight="126" id="npX-ey-h2u" customClass="ElementTableViewCell" customModule="DAM_TD4" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="126"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="npX-ey-h2u" id="g7C-d4-Pwi">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="npX-ey-h2u" id="g7C-d4-Pwi">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="125"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZKv-Ky-8ue">
+                                        <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZKv-Ky-8ue">
                                             <rect key="frame" x="0.0" y="0.0" width="313" height="126"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="126" id="3ua-H1-jDe"/>
@@ -35,7 +35,7 @@
                                                 <constraint firstAttribute="width" constant="313" id="Zeh-E0-dp8"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tqN-rv-ZIG">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="&gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tqN-rv-ZIG">
                                             <rect key="frame" x="314" y="0.0" width="61" height="126"/>
                                             <color key="backgroundColor" red="0.19607843137254902" green="0.19607843137254902" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
@@ -47,7 +47,7 @@
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OeP-eG-8C8">
+                                        <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OeP-eG-8C8">
                                             <rect key="frame" x="0.0" y="104" width="313" height="22"/>
                                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
@@ -62,7 +62,7 @@
                                     <constraints>
                                         <constraint firstAttribute="bottom" secondItem="tqN-rv-ZIG" secondAttribute="bottom" constant="-1" id="6sr-bA-EY0"/>
                                         <constraint firstItem="ZKv-Ky-8ue" firstAttribute="top" secondItem="g7C-d4-Pwi" secondAttribute="top" id="8WY-WK-lYu"/>
-                                        <constraint firstItem="tqN-rv-ZIG" firstAttribute="leading" secondItem="ZKv-Ky-8ue" secondAttribute="trailing" constant="1" id="BL7-PA-bEt"/>
+                                        <constraint firstItem="tqN-rv-ZIG" firstAttribute="leading" secondItem="ZKv-Ky-8ue" secondAttribute="trailing" id="BL7-PA-bEt"/>
                                         <constraint firstItem="tqN-rv-ZIG" firstAttribute="leading" secondItem="OeP-eG-8C8" secondAttribute="trailing" constant="1" id="KEf-ZO-Wsi"/>
                                         <constraint firstAttribute="bottom" secondItem="OeP-eG-8C8" secondAttribute="bottom" constant="-1" id="TCM-es-LTz"/>
                                         <constraint firstItem="ZKv-Ky-8ue" firstAttribute="leading" secondItem="g7C-d4-Pwi" secondAttribute="leading" id="TPz-xp-oyA"/>
@@ -279,6 +279,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hwq-hf-e1F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2236" y="-154.27286356821591"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="r8o-mo-cxb">
+            <objects>
+                <viewController id="ud4-as-Yaw" customClass="WebViewController" customModule="DAM_TD4" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eWR-uR-fPe"/>
+                        <viewControllerLayoutGuide type="bottom" id="MpE-Kq-ys3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PH3-gy-FSj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.32549019610000002" green="0.32549019610000002" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CZ8-U8-jYM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1333.5999999999999" y="526.6866566716642"/>
         </scene>
     </scenes>
 </document>

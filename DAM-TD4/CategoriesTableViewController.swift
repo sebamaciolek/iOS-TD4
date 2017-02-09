@@ -45,8 +45,9 @@ class CategoriesTableViewController: UITableViewController {
                         let nom = element.element?.attribute(by: "name")?.text
                         let image = element.element?.attribute(by: "image")?.text
                         let description = element.element?.attribute(by: "descr")?.text
+                        let imageLarge = element.element?.attribute(by: "image_large")?.text
 
-                        newArrayElement.append(Element(id: String(id!)!, image: image!, nom: nom!, description: description!))
+                        newArrayElement.append(Element(id: String(id!)!, image: image!, nom: nom!, description: description!, imageLarge: imageLarge!))
                     }
                     arrayElement.append(newArrayElement)
                 }
@@ -113,7 +114,18 @@ class CategoriesTableViewController: UITableViewController {
         
         return view
     }
-
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt
+        indexPath: IndexPath){
+        
+        tableView.deselectRow(at: indexPath as IndexPath, animated: true)
+        
+        let theWebViewController = WebViewController()
+        theWebViewController.element = self.arrayElement[indexPath.section][indexPath.row]
+        
+        
+        navigationController?.pushViewController(theWebViewController, animated: true)
+    }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 45
