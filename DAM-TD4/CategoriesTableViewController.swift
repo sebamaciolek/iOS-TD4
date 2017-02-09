@@ -13,8 +13,8 @@ import SDWebImage
 class CategoriesTableViewController: UITableViewController {
     
     //var xml = SWXMLHash.parse("")
-    var tab = [Any]()
     var arrayCategory : [Category] = []
+    var arrayElement : [[Element]] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +37,8 @@ class CategoriesTableViewController: UITableViewController {
                     let nom = category.element?.attribute(by: "name")?.text
 
                     arrayCategory.append(Category(id: String(id!)!, nom: nom!))
-                    print(nom)
+                    
+                    var newArrayElement: [Element] = []
                     
                     for element in category["element"].all{
                         let id = element.element?.attribute(by: "id")?.text
@@ -45,8 +46,9 @@ class CategoriesTableViewController: UITableViewController {
                         let image = element.element?.attribute(by: "image")?.text
                         let description = element.element?.attribute(by: "descr")?.text
 
-                        tab.append(Element(id: String(id!)!, image: image!, nom: nom!, description: description!))
+                        newArrayElement.append(Element(id: String(id!)!, image: image!, nom: nom!, description: description!))
                     }
+                    arrayElement.append(newArrayElement)
                 }
             }
             catch{
@@ -72,44 +74,25 @@ class CategoriesTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return tab.count
+        return arrayElement[section].count
     }
     
-    /*override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        
-        return (arrayCategory[section].nom)
-        
-    }*/
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var objet = tab[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Element", for: indexPath)
         
-        var cell = UITableViewCell()
-        
-        if objet is Category{
-            cell = tableView.dequeueReusableCell(withIdentifier: "Category", for: indexPath)
-            var categoryCell = objet as! Category
-            print(cell)
-            
-           if let labelName = cell.viewWithTag(1) as? UILabel {
-            labelName.text = categoryCell.nom
-            
-            }
-            
-            if let imageView = cell.viewWithTag(100) as? UIImageView {
-                imageView.sd_setImage(with: URL(string: "http://www.domain.com/path/to/image.jpg"), placeholderImage: UIImage(named: "placeholder.png"))
-            }
-            
+        if let labelName = cell.viewWithTag(101) as? UILabel {
+            labelName.text = self.arrayElement[indexPath.section][indexPath.row].nom
         }
         else{
-            cell = tableView.dequeueReusableCell(withIdentifier: "Element", for: indexPath)
-            var elementCell = objet as! Element
-            
-            if let labelName = cell.viewWithTag(102) as? UILabel {
-                labelName.text = elementCell.nom
-                
-            }
-            
+            print("Cannot find labelName by tag")
+        }
+        
+        if let imageView = cell.viewWithTag(100) as? UIImageView {
+            var url = self.arrayElement[indexPath.section][indexPath.row].image
+            imageView.sd_setImage(with: URL(string: url), placeholderImage: UIImage(named: "Doge"))
+        }
+        else{
+            print("Cannot find imageView by tag")
         }
         
         return cell
@@ -135,29 +118,6 @@ class CategoriesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 45
     }
-    
-    
-   // override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
-    /*override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        var objet = tab[section]
-        
-        var cell = UITableViewCell()
-        
-        if objet is Category{
-           // cell = tableView.dequeueReusableCell(withIdentifier: "Category", for: section)
-            var categoryCell = objet as! Category
-            return (categoryCell.nom)
-        } else if objet is Element{
-            var elementCell = objet as! Element
-            return (elementCell.nom)
-        }
-        else{
-            return "";
-        }
-        //return (tab[section] as AnyObject).nom
-        
-    }*/
     
     /*
      // Override to support conditional editing of the table view.
