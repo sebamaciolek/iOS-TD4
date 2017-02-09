@@ -5,14 +5,13 @@ Binomes : Landraudie Marine et Maciolek Sebastian
 Temps : 2 semaines (2 séances)
 
 Taches à réaliser :
-- Récupération des informations nécessaires de l'élément cliqué
-- Affichage des informations en fonction des données (si image_large alors afficher l'image sinon afficher descr dans une WebView)
 - (BONUS) Adaptation du WebService en fonction de la langue du terminal
 - (BONUS) Rendre le tout disponible hors-ligne (mise en cache du fichier XML)
 
 Taches en cours :
 - Récupération du XML parsé dans le LaunchScreen
-- Affichage des informations dans les cellules
+- Récupération des informations nécessaires de l'élément cliqué
+- Affichage des informations en fonction des données (si image_large alors afficher l'image sinon afficher descr dans une WebView)
 - (CORRECTION) Rendre le label des sections responsive
 
 Taches terminés :
@@ -35,3 +34,4 @@ Taches terminés :
 - (CORRECTION) Utiliser des sections dans le UITableView (voir http://blog.apoorvmote.com/uitableview-with-multiple-sections-ios-swift/?lang=fr)
 - Récupération du nom des sections depuis le XML et les afficher dans les sections de l'appli
 - Modification du design des sections (en suivant la charte imposée)
+- Affichage des informations dans les cellules
